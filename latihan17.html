@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<body>
+<script language="JavaScript" type="text/javascript">
+    var myName = prompt("Please enter your name", "budi");
+    var nb = prompt("Please nama barang", "");
+    var hs = prompt("Please harga satuan", "");
+    var jb = prompt("Please jumlah barang", "");
+    
+    // Menghitung harga kotor
+    var hb = parseInt(hs) * parseInt(jb);
+    var disc = 0;
+
+    // Logika Diskon
+    if (hb > 500000) {
+        disc = 0.05 * hb; // 5 persen
+    } else if (hb > 300000) {
+        disc = 0.02 * hb; // 2 persen
+    } else {
+        disc = 0.005 * hb; // 0.5 persen
+    }
+
+    var hbb = hb - disc;
+
+    // Menampilkan Hasil
+    document.write("<font size=5 color='blue'>Penjualan Harga Barang</font><br>");
+    document.write("<font size=4 color='sienna'><pre>");
+    document.write("Nama barang       = " + nb + "<br>");
+    document.write("Harga satuan      = " + hs + "<br>");
+    document.write("Jumlah Barang     = " + jb + "<br>");
+    document.write("Harga Barang      = " + hb + "<br>");
+    document.write("Harga Discount    = " + disc + "<br>");
+    document.write("Harga Barang Bersih = " + hbb + "<br>");
+    document.write("</pre></font>");
+    
+    document.write("<font size=3 color='red'>Created by " + myName + "</font>");
+</script>
+<br> <a href="tugas.html" class="btn-custom">Kembali ke Halaman Daftar Tugas</a>
+</body>
+</html>

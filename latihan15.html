@@ -1,0 +1,248 @@
+<html>
+<head>
+    <title>Dialog Box</title>
+</head>
+<body bgcolor="grey" text="white">
+    <b>Mencoba Menggunakan Alert</b><br>
+    <h2>
+        <script type="text/javascript">
+            document.write("Ini adalah Bunga, ");
+            document.write("Bunga Kemuning indah warnanya<br>");
+            alert("Aku adalah Superhero");
+        </script>
+    </h2>
+</body>
+</html>
+
+<html>
+<head>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+    var nama = prompt("Masukkan nama Anda", "");
+    var panjang = prompt("Masukan panjang ", "25");
+    var lebar = prompt("Masukan lebar", "");
+    
+    // Mengubah string menjadi integer untuk perhitungan matematika
+    var luas = parseInt(panjang) * parseInt(lebar);
+    
+    document.write("<font size=5 color='blue'>Luas Persegi Panjang</font>", "<br>");
+    document.write("====================", "<br>");
+    document.write("Programmer = ", nama, "<br>");
+    document.write("Panjang = ", panjang, " cm <br>");
+    document.write("Lebar = ", lebar, " cm <br>");
+    document.write("Luas = ", panjang, " * ", lebar, " = ", luas, " cm <sup>2</sup><br>");
+</script>
+</body>
+</html>
+
+<html>
+<head>
+    <title>Penggunaan confirm box</title>
+</head>
+<body>
+<script type="text/javascript">
+    if (confirm("Apakah Engkau baik-baik saja?") == true) {
+        alert("Kita lanjut saja");
+    } else {
+        alert("Kita coba mencari yang lebih baik");
+    }
+</script>
+</body>
+</html>
+
+<html>
+<head><title>Latihan Dengan Objek Text</title></head>
+<body>
+<script language="JavaScript">
+    function tekan() {
+        var namastr = (document.fform.nama.value);
+        var alamatstr = (document.fform.alamat.value);
+        
+        document.fform.onama.value = namastr;
+        document.fform.oalamat.value = alamatstr;
+        
+        alert("lihat dulu");
+        document.write("Nama anda:", namastr, "<br>");
+        document.write("Alamat anda:", alamatstr, "<br>");
+    }
+</script>
+
+<form name="fform">
+    <H1> Memasukkan Data Dengan Objek Teks</H1><hr>
+    <PRE>
+    Nama Anda: <input type="text" size="11" name="nama">
+    Alamat   : <input type="text" size="25" name="alamat">
+    </PRE>
+    <BR>
+    <input type="button" value="kirim" onclick="tekan()">
+    <input type="reset" value="ulang">
+    
+    <H3>Output</H3>
+    <PRE>
+    Jadi Nama Anda adalah: <input type="text" size="11" name="onama">
+    Alamat Anda di       : <input type="text" size="25" name="oalamat">
+    </PRE>
+</form>
+</body>
+</html>
+
+<html>
+<head><title>Latihan Dengan Objek Radio</title></head>
+<body>
+<script language="JavaScript">
+    function radio_box(form) {
+        var ket = "";
+        // Looping untuk mengecek opsi mana yang dicentang
+        for (var i = 0; i < document.myform.jenis.length; i++) {
+            if (document.myform.jenis[i].checked == true) {
+                ket = document.myform.jenis[i].value;
+            }
+        }
+        alert('Anda adalah seorang ' + ket);
+    }
+</script>
+
+<form name="myform">
+    <H1> Memasukkan Data Dengan Objek Radio</H1><hr>
+    <p>
+        <input type="radio" value="wanita" name="jenis">Wanita
+        <input type="radio" value="pria" name="jenis">Pria
+    </p>
+    <hr>
+    <p>
+        <input type="button" value="CONFIRM" onclick="radio_box(this.form)">
+        <input type="reset" value="RESET">
+    </p>
+</form>
+</body>
+</html>
+
+<html>
+<head><title>Latihan Dengan Objek Select</title></head>
+<body>
+<script language="JavaScript">
+    function tekan() {
+        var jurusanstr = (document.fform.Jurusan.value);
+        document.fform.Ojurusan.value = jurusanstr;
+    }
+</script>
+
+<form name="fform">
+    <H1> Penggunaan Objek Select</H1><hr>
+    <h3>Masukan :</h3>
+    Jurusan Di UNPAM: 
+    <select name="Jurusan" size="1">
+        <option value="Teknik Informatika"> Teknik Informatika </option>
+        <option value="Manajemen Informatika"> Manajemen Informatika </option>
+        <option value="Teknik Komputer"> Teknik Komputer </option>
+        <option value="Teknik Industri"> Teknik Industri </option>
+        <option value="Teknik Elektro"> Teknik Elektro </option>
+        <option value="Teknik Sipil"> Teknik Sipil </option>
+        <option value="Teknik Arsitektur"> Teknik Arsitektur </option>
+        <option value="Teknik Mesin"> Teknik Mesin</option>
+    </select>
+    
+    <p>
+        <input type="button" value="kirim" onclick="tekan()">
+        <input type="reset" value="ulang">
+    </p>
+    
+    <H3>Output jurusan :</H3>
+    <input type="text" name="Ojurusan" size="30">
+</form>
+</body>
+</html>
+
+<html>
+<head><title>Latihan Dengan Objek Checkbox</title></head>
+<body>
+<script language="JavaScript">
+    function check_box(form) {
+        var ket = "";
+        var ket1 = "";
+        
+        if (form.bola.checked == true) {
+            ket = "Nonton Bola";
+        }
+        
+        if (form.tv.checked == true) {
+            ket1 = "Nonton Tv";
+        }
+        
+        alert('Hobby anda ' + ket + " " + ket1);
+    }
+</script>
+
+<form>
+    <H1> Memasukkan Data Dengan Objek Checkbox</H1><hr>
+    <p>Hobby anda:
+        <input type="checkbox" value="ON" name="bola">Nonton Sepak Bola
+        <input type="checkbox" value="ON" name="tv">Nonton televisi
+    </p>
+    <hr>
+    <p>
+        <input type="button" value="CONFIRM" onclick="check_box(this.form)">
+        <input type="reset" value="RESET">
+    </p>
+</form>
+</body>
+</html>
+
+<html>
+<head>
+<script language="JavaScript" type="text/javascript">
+    function butCheckForm_onclick() {
+        var myForm = document.form1;
+        
+        // Cek apakah Nama ATAU Umur kosong
+        if (myForm.txtAge.value == "" || myForm.txtName.value == "") {
+            alert("Please complete all the form");
+            
+            if (myForm.txtName.value == "") {
+                myForm.txtName.focus();
+            } else {
+                myForm.txtAge.focus();
+            }
+        } else {
+            alert("Thanks for completing the form " + myForm.txtName.value);
+        }
+    }
+
+    function txtAge_onblur() {
+        var txtAge = document.form1.txtAge;
+        // Cek apakah input umur BUKAN angka
+        if (isNaN(txtAge.value) == true) {
+            alert("Please enter a valid age");
+            txtAge.focus();
+            txtAge.select();
+        }
+    }
+
+    function txtName_onchange() {
+        window.status = "Hi " + document.form1.txtName.value;
+    }
+</script>
+</head>
+<body>
+    <form name="form1">
+        Please enter the following details:
+        <p>
+        Name:<br>
+        <input type="text" name="txtName" onchange="txtName_onchange()"><br>
+        
+        Age:<br>
+        <input type="text" name="txtAge" onblur="txtAge_onblur()" size="3" maxlength="3"><br>
+        
+        <input type="button" value="Check Details" name="butCheckForm" onclick="butCheckForm_onclick()">
+    </form>
+</body>
+</html>
+
+<html>
+<body>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+    <p id="demo"></p>
+    <br> <a href="tugas.html" class="btn-custom">Kembali ke Halaman Daftar Tugas</a>
+</body>
+</html>
